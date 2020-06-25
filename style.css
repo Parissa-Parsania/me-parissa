@@ -1,0 +1,32 @@
+.header {
+    border-bottom: 1px solid blue;
+    height: 10vh;
+    text-align:center;
+    padding-top: 5vh;
+     
+}
+
+.header-box {
+    margin-left: 60px; 
+    padding: 20;
+    text-decoration: none;   
+    color: #34495E ;
+    background-color:#D5DBDB;
+}
+
+.header-box:hover {
+    background-color: #717D7E ;
+}
+
+.selected-box {
+    border-bottom: 3px solid #1F618D ;
+} 
+
+.content{
+    text-align: center;
+}
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
