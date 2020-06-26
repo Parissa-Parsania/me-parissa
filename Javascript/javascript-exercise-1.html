@@ -1,0 +1,17 @@
+<h1 id="text"></h1>
+<button onclick="showArash()"> Show Arash</button>
+<!-- onclick means, call the function in "" when user clicks on the button -->
+<button onclick="showParissa()"> Show Parissa</button>
+<script>
+    function showArash() {
+        // this is where we define the function
+        document.getElementById("text").innerText = "Arash"
+        // document= current file that we are working on
+        // getelementbyId= having the id in our hand to be ready for next order
+        // innertext or innerhtml= show the text in "" when function calls
+    }
+    function showParissa() {
+        // 
+        document.getElementById("text").innerText = "Parissa"
+    }
+</script>
