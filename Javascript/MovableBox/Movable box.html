@@ -4,17 +4,33 @@
 <!-- we need class for giving the div style and we need id for giving it a function in Script -->
 <br>
 <!-- for having a line in between -->
-<button onclick="moveLeft()"> Left</button>
-<button onclick="moveCenter()"> Center</button>
-<button onclick="moveRight()"> Right</button>
+<button onclick="move('left')"> Left</button>
+<button onclick="move('center')"> Center</button>
+<button onclick="move('right')"> Right</button>
 <script>
-    function moveCenter(){
-        document.getElementById("box").className = "box-center"
-    }
-    function moveLeft(){
-        document.getElementById("box").className = "box-default"
-    }
-    function moveRight(){
-        document.getElementById("box").className = "box-right"
+    // this is the first method we learned to write the code.
+    // function moveCenter(){
+    //     document.getElementById("box").className = "box-center"
+    // }
+    // function moveLeft(){
+    //     document.getElementById("box").className = "box-default"
+    // }
+    // function moveRight(){
+    //     document.getElementById("box").className = "box-right"
+    // }
+    // now we are going to do it again with Condition which is faster and one step ahead
+    function move(whichside) {
+        if (whichside === "left") {
+            document.getElementById("box").className = "box-default";
+        }
+// whichside is variable and we say that if whichside was left, then have the box in hand and do the CSS details for classname=box-default
+        if (whichside === "right") {
+            document.getElementById("box").className = "box-right";
+        }
+
+        if (whichside === "center") {
+            document.getElementById("box").className = "box-center"
+        }
+
     }
 </script>
