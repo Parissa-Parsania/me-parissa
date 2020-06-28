@@ -1,0 +1,20 @@
+.box-default {
+    border: 1px solid red;
+    width: 30%;
+    height: 100px;
+    margin-left:0;
+}
+
+.box-center {
+    border: 1px solid red;
+    width: 30%;
+    height: 100px;
+    margin-left: 35%;
+}
+
+.box-right {
+    border: 1px solid red;
+    width: 30%;
+    height: 100px;
+    margin-left: 70%;
+}

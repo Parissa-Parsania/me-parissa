@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="Movable Box.css">
+<!-- giving the codes a style- relating to a CSS file -->
+<div class="box-default" id="box"></div>
+<!-- we need class for giving the div style and we need id for giving it a function in Script -->
+<br>
+<!-- for having a line in between -->
+<button onclick="moveLeft()"> Left</button>
+<button onclick="moveCenter()"> Center</button>
+<button onclick="moveRight()"> Right</button>
+<script>
+    function moveCenter(){
+        document.getElementById("box").className = "box-center"
+    }
+    function moveLeft(){
+        document.getElementById("box").className = "box-default"
+    }
+    function moveRight(){
+        document.getElementById("box").className = "box-right"
+    }
+</script>
