@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Main page</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function changeRoute(where) {
+            document.getElementById("iframe").src = where;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a class="header-box selected-box" onclick="changeRoute('main/main.html')">
+            Main page
+        </a>
+        <a class="header-box" onclick="changeRoute('Gallery/gallery.html')">
+            Gallery
+        </a>
+        <a class="header-box" onclick="changeRoute('login/login.html')">
+            Login
+        </a>
+        <a class="header-box" onclick="changeRoute('contactus/contactus.html')">
+            Contact Us
+        </a>
+    </div>
+    <div>
+        <iframe id="iframe" src="main/main.html" frameborder="0" width="100%" height="500vh"></iframe>
+    </div>
+</body>
+
+</html>
