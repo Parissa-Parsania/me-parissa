@@ -1,0 +1,21 @@
+div{
+    color: black;
+    border: solid black 1px;
+    width: 20%;
+    height: 8vh;
+    text-align: center;
+    padding-top: 5vh;
+    margin: 2px;
+}
+.redDiv{
+    background-color: red;
+    float: left;
+}
+.blueDiv{
+    background-color:blue;
+    float: left;
+}
+.greenDiv{
+    background-color: green;
+    display:inline-block;
+}
