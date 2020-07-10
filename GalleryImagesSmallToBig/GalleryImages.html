@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="galleryImages.css">
+</head>
+
+<body>
+    <div class="bigImage" id="bigImage">
+        <img src="images/1.jpg" class="big" id="big">
+    </div><br>
+    <div class="smallImages" id="smallImages">
+        <img src="images/1.jpg" class="small" id="small1" onclick="openBigImage1()">
+        <img src="images/2.jpg" class="small" id="small2" onclick="openBigImage2()">
+        <img src="images/3.jpg" class="small" id="small3" onclick="openBigImage3()">
+        <img src="images/4.jpg" class="small" id="small4" onclick="openBigImage4()">
+    </div>
+    <script>
+        function openBigImage2() {
+            document.getElementById("big").src="images/2.jpg"
+        }
+        function openBigImage1() {
+            document.getElementById("big").src="images/1.jpg"
+        }
+        function openBigImage3() {
+            document.getElementById("big").src="images/3.jpg"
+        }
+        function openBigImage4() {
+            document.getElementById("big").src="images/4.jpg"
+        }
+
+
+    </script>
+
+</body>
