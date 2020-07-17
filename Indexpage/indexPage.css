@@ -4,8 +4,7 @@ body{
 h1{
     color: #A52A2A;
     text-align: center;
-    width: fit-content;
-    margin: 20% 25% auto 25%;
+    margin-top: 15%;
     font-family: cursive;
     font-size: 35px;
 }
@@ -16,10 +15,13 @@ button{
     font-family: cursive;
     text-align: center;
     font-size: large;
-    margin: 4% 40% auto;
+    text-align: center;
     padding: 1%;
 }
 button:hover {
     background-color: brown;
     color: burlywood;
+}
+div{
+    text-align: center;
 }
