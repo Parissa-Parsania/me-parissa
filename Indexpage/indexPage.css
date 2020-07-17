@@ -4,9 +4,8 @@ body{
 h1{
     color: #A52A2A;
     text-align: center;
-    /* border: 1px solid black; */
     width: fit-content;
-    margin: 15% 25% auto 25%;
+    margin: 20% 25% auto 25%;
     font-family: cursive;
     font-size: 35px;
 }
@@ -17,6 +16,10 @@ button{
     font-family: cursive;
     text-align: center;
     font-size: large;
-    margin: 6% 40% auto;
+    margin: 4% 40% auto;
     padding: 1%;
+}
+button:hover {
+    background-color: brown;
+    color: burlywood;
 }
