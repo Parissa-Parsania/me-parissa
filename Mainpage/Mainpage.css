@@ -1,0 +1,25 @@
+.main-div {
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.left-div {
+    width: 30%;
+    background-color: #DEB887;
+    color: #A52A2A;
+    font-size: x-large;
+    font-family: cursive;
+    width: fit-content;
+    text-align: center;
+    padding: 5px;
+}
+
+.right-div {
+    width: 69%;
+    background-color: #FFFACD;
+    ;
+}
+
+p:hover {
+    background-color: #CD853F;
+}

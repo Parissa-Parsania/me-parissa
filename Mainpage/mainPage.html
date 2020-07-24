@@ -1,0 +1,29 @@
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="Mainpage.css" />
+</head>
+
+<body>
+    <div class="main-div left-div">
+        <p id="dashboard" onclick="showDashboard()">Dashboard</p>
+        <p id="menu1" onclick="showMenu1()">Menu 1</p>
+        <p id="menu2" onclick="showMenu2()">Menu 2</p>
+    </div>
+    <div class="main-div right-div">
+        <iframe src="dashboard/dashBoard.html" id="iframe" class="iframe" width="100%"></iframe>
+    </div>
+    <script>
+        function showDashboard() {
+            document.getElementById("iframe").src = "dashboard/dashBoard.html";
+            document.getElementById("dashboard").color = "black"
+        }
+
+        function showMenu1() {
+            document.getElementById("iframe").src = "Menu1/menu1.html";
+        }
+
+        function showMenu2() {
+            document.getElementById("iframe").src = "Menu2/menu2.html";
+        }
+    </script>
+</body>
