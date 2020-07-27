@@ -4,26 +4,47 @@
 </head>
 
 <body>
-    <div class="main-div left-div">
-        <p id="dashboard" onclick="showDashboard()">Dashboard</p>
-        <p id="menu1" onclick="showMenu1()">Menu 1</p>
-        <p id="menu2" onclick="showMenu2()">Menu 2</p>
+    <div class="main-div">
+        <div class="left-div">
+            <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">Dashboard</div>
+            <div class="menu" id="menu1" onmouseover="menuOnMouseOver('menu1')" onmouseout="menuOnMouseOut('menu1')" onclick=" menuSelected( 'Menu1/menu1.html', 'menu1') ">Menu 1</div>
+            <div class=" menu " id="menu2" onmouseover="menuOnMouseOver('menu2') " onmouseout="menuOnMouseOut('menu2')" onclick="menuSelected('Menu2/menu2.html', 'menu2')">Menu 2</div>
+            <div class=" menu " id="menu3" onmouseover="menuOnMouseOver('menu3')" onmouseout="menuOnMouseOut('menu3')" onclick=" menuSelected( 'dashboard/dashBoard.html', 'menu3') ">Menu 3</div>
+        </div>
+        <div class="right-div ">
+            <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
+        </div>
     </div>
-    <div class="main-div right-div">
-        <iframe src="dashboard/dashBoard.html" id="iframe" class="iframe" width="100%"></iframe>
-    </div>
-    <script>
-        function showDashboard() {
-            document.getElementById("iframe").src = "dashboard/dashBoard.html";
-            document.getElementById("dashboard").color = "black"
-        }
-
-        function showMenu1() {
-            document.getElementById("iframe").src = "Menu1/menu1.html";
-        }
-
-        function showMenu2() {
-            document.getElementById("iframe").src = "Menu2/menu2.html";
-        }
-    </script>
 </body>
+
+<script>
+    var selectedColor = "#FFFACD";
+    var originalColor = "#DEB887";
+    var globalSelectedElementId = "dashboard";
+
+
+    function menuSelected(src, selectedElementId) {
+        var menus = ["menu1", "menu2", "dashboard", "menu3"];
+        document.getElementById("iframe ").src = src;
+        globalSelectedElementId = selectedElementId;
+        document.getElementById(selectedElementId).style.backgroundColor = selectedColor;
+        menus.forEach(element => {
+            // this body execute menus.length times and each time element variable is one of the menus
+            if (element !== selectedElementId) {
+                document.getElementById(element).style.backgroundColor = originalColor;
+            }
+        });
+    }
+
+    function menuOnMouseOver(elementId) {
+        document.getElementById(elementId).style.backgroundColor = selectedColor;
+        document.getElementById(elementId).style.cursor = "pointer";
+
+    }
+
+    function menuOnMouseOut(elementId) {
+        if (globalSelectedElementId !== elementId) {
+            document.getElementById(elementId).style.backgroundColor = originalColor;
+        }
+    }
+</script>
