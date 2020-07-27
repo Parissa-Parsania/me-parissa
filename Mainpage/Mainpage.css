@@ -1,0 +1,34 @@
+.main-div {
+    display: flex;
+    height: 100%;
+}
+
+.left-div {
+    width: 25%;
+    background-color: #DEB887;
+    color: #A52A2A;
+    font-size: x-large;
+    font-family: cursive;
+    text-align: center;
+}
+
+.right-div {
+    width: 74%;
+    background-color: #FFFACD;
+}
+
+
+/* .menu:hover {
+    background-color: #CD853F;
+    cursor: pointer; */
+
+
+/* } */
+
+.menu {
+    border-bottom: brown 1px solid;
+}
+
+.iframe {
+    border: none;
+}
