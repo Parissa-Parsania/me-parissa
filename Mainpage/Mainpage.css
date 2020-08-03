@@ -15,6 +15,7 @@
 .right-div {
     width: 74%;
     background-color: #FFFACD;
+    height: 100%;
 }
 
 
@@ -31,4 +32,5 @@
 
 .iframe {
     border: none;
+    height: 100%;
 }
