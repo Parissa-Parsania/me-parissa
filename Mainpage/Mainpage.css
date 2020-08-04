@@ -18,17 +18,14 @@
     height: 100%;
 }
 
-
-/* .menu:hover {
-    background-color: #CD853F;
-    cursor: pointer; */
-
-
-/* } */
-
 .menu {
     border-bottom: brown 1px solid;
 }
+
+
+/* .menu:hover {
+    cursor: pointer;
+} */
 
 .iframe {
     border: none;

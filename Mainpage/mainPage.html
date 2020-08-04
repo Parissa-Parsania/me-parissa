@@ -7,9 +7,10 @@
     <div class="main-div">
         <div class="left-div">
             <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">Dashboard</div>
-            <div class="menu" id="menu1" onmouseover="menuOnMouseOver('menu1')" onmouseout="menuOnMouseOut('menu1')" onclick=" menuSelected( 'Menu1/menu1.html', 'menu1') ">Menu 1</div>
+            <div class="menu" id="math" onmouseover="menuOnMouseOver('math')" onmouseout="menuOnMouseOut('math')" onclick="menuSelected('Math/math.html','math')">Math</div>
+            <!-- <div class="menu" id="menu1" onmouseover="menuOnMouseOver('menu1')" onmouseout="menuOnMouseOut('menu1')" onclick=" menuSelected( 'Menu1/menu1.html', 'menu1') ">Menu 1</div>
             <div class=" menu " id="menu2" onmouseover="menuOnMouseOver('menu2') " onmouseout="menuOnMouseOut('menu2')" onclick="menuSelected('Menu2/menu2.html', 'menu2')">Menu 2</div>
-            <div class=" menu " id="menu3" onmouseover="menuOnMouseOver('menu3')" onmouseout="menuOnMouseOut('menu3')" onclick=" menuSelected( 'dashboard/dashBoard.html', 'menu3') ">Menu 3</div>
+            <div class=" menu " id="menu3" onmouseover="menuOnMouseOver('menu3')" onmouseout="menuOnMouseOut('menu3')" onclick=" menuSelected( 'dashboard/dashBoard.html', 'menu3') ">Menu 3</div> -->
         </div>
         <div class="right-div ">
             <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
@@ -24,7 +25,7 @@
 
 
     function menuSelected(src, selectedElementId) {
-        var menus = ["menu1", "menu2", "dashboard", "menu3"];
+        var menus = ["math", "dashboard"];
         document.getElementById("iframe ").src = src;
         globalSelectedElementId = selectedElementId;
         document.getElementById(selectedElementId).style.backgroundColor = selectedColor;

@@ -1,0 +1,31 @@
+<head>
+    <link rel="stylesheet" href="math.css">
+</head>
+
+<body>
+    <div class="right-div">
+        <div class="box" id="powerOf2">
+            <h3>Exponentiation:</h3>
+            <input type="number" placeholder="Base number" id="base-number">
+            <span>to the power of</span>
+            <input type="number" placeholder="Power" id="power">
+            <button onclick="calculatePower()">Calculate!</button>
+            <span id="result"></span>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    function calculatePower() {
+        var x = document.getElementById("base-number").value;
+        var y = document.getElementById("power").value;
+        // var z = Math.pow(x, y); This is one solution, but we have another solution to use for loop as below:
+        var result = x
+        for (var i = 1; i < y; i++) {
+            result = result * x
+        }
+
+        document.getElementById("result").innerText = "The result is " + result;
+    }
+</script>
