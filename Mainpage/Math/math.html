@@ -10,8 +10,15 @@
             <span>to the power of</span>
             <input type="number" placeholder="Power" id="power">
             <button onclick="calculatePower()">Calculate!</button><br> <br>
-            <span id="result"></span>
+            <span id="resultOfPower"></span>
 
+        </div>
+        <div class="box" id="convertNumber">
+            <h3>Reverse a number sign:</h3>
+            <p>(Converting positive number into negative and vice versa)</p>
+            <input type="number" placeholder="Enter the number" id="numberToConvert">
+            <button onclick="convertSign()">Go!</button><br>
+            <span id="convertedSignNumber"></span>
         </div>
     </div>
 
@@ -23,20 +30,26 @@
         var result = x
         if (y === "0" && x !== "0") {
             result = 1;
-            document.getElementById("result").innerText = "The result is " + result;
+            document.getElementById("resultOfPower").innerText = "The result is " + result;
             return; // it means that if y===0 do not continue the function anymore
         }
         if (y === "0" && x == "0") {
             result = "It is a mathematical expression with no agreed-upon value.";
-            document.getElementById("result").innerText = result;
+            document.getElementById("resultOfPower").innerText = result;
             return;
         }
         for (var i = 1; i < y; i++) {
             result = result * x
         }
 
-        document.getElementById("result").innerText = "The result is " + result;
+        document.getElementById("resultOfPower").innerText = "The result is " + result;
     }
 
     // var z = Math.pow(x, y); This is one solution, but we have another solution to use for loop as abow
+
+    function convertSign() {
+        var x = document.getElementById("numberToConvert").value;
+        var y = x * (-1)
+        document.getElementById("convertedSignNumber").innerText = "The result is " + y;
+    }
 </script>
