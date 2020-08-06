@@ -28,6 +28,14 @@
             <button onclick="squareNumber()">True/False?</button>
             <span id="true/falseResult"></span>
         </div>
+        <div class="box" id="digitCount">
+            <h3>Count number of digits in an integer:</h3>
+            <span>How many digits does </span>
+            <input type="number" placeholder="Enter your number" id="num">
+            <span>have?</span>
+            <button onclick="countingDigits()">Go!</button><br><br>
+            <span id="numberOfDigits"></span>
+        </div>
     </div>
 
 </body>
@@ -85,5 +93,19 @@
         // var y = Math.sqrt(x);
         // z = Number.isInteger(y)
         // document.getElementById("true/falseResult").innerHTML = z;
+    }
+
+    function countingDigits() {
+        var x = document.getElementById("num").value;
+        var counter = 0;
+        while (x >= 1 || x <= -1) {
+            x = x / 10;
+            counter++;
+        }
+        document.getElementById("numberOfDigits").innerHTML = "Number of digits:" + counter;
+
+        if (x == 0 || x == 1) {
+            document.getElementById("numberOfDigits").innerHTML = "Number of digits:1";
+        }
     }
 </script>
