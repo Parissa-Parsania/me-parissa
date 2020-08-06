@@ -98,14 +98,13 @@
     function countingDigits() {
         var x = document.getElementById("num").value;
         var counter = 0;
+        if (x == 0 || x == 1) {
+            document.getElementById("numberOfDigits").innerHTML = "Number of digits:1";
+        }
         while (x >= 1 || x <= -1) {
             x = x / 10;
             counter++;
         }
         document.getElementById("numberOfDigits").innerHTML = "Number of digits:" + counter;
-
-        if (x == 0 || x == 1) {
-            document.getElementById("numberOfDigits").innerHTML = "Number of digits:1";
-        }
     }
 </script>
