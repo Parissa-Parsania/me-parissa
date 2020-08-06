@@ -63,12 +63,27 @@
 
     function squareNumber() {
         var x = document.getElementById("givenNumber").value;
+        document.getElementById("true/falseResult").innerText = "False";
         if (x < 0) {
             document.getElementById("true/falseResult").innerText = "A negative number cannot be a square number";
             return;
         }
-        var y = Math.sqrt(x);
-        z = Number.isInteger(y)
-        document.getElementById("true/falseResult").innerHTML = z;
+        if (x == 0 || x == 1) {
+            document.getElementById("true/falseResult").innerText = "True";
+            return;
+        }
+        for (i = 0; i < x; i++) {
+
+            if (i * i == x) {
+                document.getElementById("true/falseResult").innerText = "True";
+                return
+            }
+
+
+        }
+        // Another solution can be:
+        // var y = Math.sqrt(x);
+        // z = Number.isInteger(y)
+        // document.getElementById("true/falseResult").innerHTML = z;
     }
 </script>
