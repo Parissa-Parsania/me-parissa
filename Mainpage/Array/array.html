@@ -30,27 +30,56 @@
 </body>
 <script>
     function reverseArray() {
-        var x = [];
-        x[0] = document.getElementById("index1").value
-        x[1] = document.getElementById("index2").value
-        x[2] = document.getElementById("index3").value
-        x[3] = document.getElementById("index4").value
-        x[4] = document.getElementById("index5").value
+        var givenNumbers = createTheArray(["index1", "index2", "index3", "index4", "index5"]);
         result = ""
-        for (i = x.length - 1; i >= 0; i--) {
-            result = result + x[i];
+        for (i = givenNumbers.length - 1; i >= 0; i--) {
+            result = result + givenNumbers[i];
         }
         document.getElementById("reveresedArray").innerHTML = "The reversed Array is: " + result;
     }
 
     function sortArray() {
-        var x = [];
-        x[0] = document.getElementById("in1").value
-        x[1] = document.getElementById("in2").value
-        x[2] = document.getElementById("in3").value
-        x[3] = document.getElementById("in4").value
-        x[4] = document.getElementById("in5").value
-        result = ""
-        document.getElementById("sortededArray").innerHTML = "Sorted array is: " + result;
+        var givenNumbers = createTheArray(["in1", "in2", "in3", "in4", "in5"]);
+
+        for (i = 0; i < givenNumbers.length; i++) {
+            for (j = 0; j < givenNumbers.length; j++) {
+                if (givenNumbers[j] > givenNumbers[j + 1]) {
+                    var temp = givenNumbers[j]
+                    givenNumbers[j] = givenNumbers[j + 1]
+                    givenNumbers[j + 1] = temp
+                }
+            }
+        }
+        document.getElementById("sortededArray").innerHTML = "Sorted array is: " + givenNumbers;
+    }
+
+    // This function is used for get a list of IDs and create the array
+    // with the given elements values and finally return the array.
+    function createTheArray(param) {
+        // param = ["id1", "id2", "id3" ...]
+        var returnResult = [];
+
+        // if (param === 'sort') {
+        //     returnResult[0] = document.getElementById("in1").value;
+        //     returnResult[1] = document.getElementById("in2").value;
+        //     returnResult[2] = document.getElementById("in3").value;
+        //     returnResult[3] = document.getElementById("in4").value;
+        //     returnResult[4] = document.getElementById("in5").value;
+        // }
+
+        // if (param === 'reverse') {
+        //     returnResult[0] = document.getElementById("index1").value
+        //     returnResult[1] = document.getElementById("index2").value
+        //     returnResult[2] = document.getElementById("index3").value
+        //     returnResult[3] = document.getElementById("index4").value
+        //     returnResult[4] = document.getElementById("index5").value
+        // }
+
+        for (var i = 0; i < param.length; i++) {
+            //     returnResult[0] = document.getElementById("index1").value
+            returnResult[i] = document.getElementById(param[i]).value;
+        }
+
+        return returnResult;
     }
 </script>
