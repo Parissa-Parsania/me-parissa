@@ -51,17 +51,6 @@
             <button onclick="addingThousandsSeprator()">Go!</button><br><br>
             <span id="finalResult"></span>
         </div>
-        <div class="box" id="reverseArray">
-            <h3>Reverse an Array:</h3>
-            <span>Fill below array:</span><br>
-            <input type="number" id="index1">
-            <input type="number" id="index2">
-            <input type="number" id="index3">
-            <input type="number" id="index4">
-            <input type="number" id="index5">
-            <button onclick="reverseArray()">Go!</button><br><br>
-            <span id="reveresedArray"></span>
-        </div>
 
     </div>
 </body>
@@ -159,19 +148,5 @@
         }
         document.getElementById("finalResult").innerHTML = "The result is " + result;
 
-    }
-
-    function reverseArray() {
-        var x = [];
-        x[0] = document.getElementById("index1").value
-        x[1] = document.getElementById("index2").value
-        x[2] = document.getElementById("index3").value
-        x[3] = document.getElementById("index4").value
-        x[4] = document.getElementById("index5").value
-        result = ""
-        for (i = x.length - 1; i >= 0; i--) {
-            result = result + x[i];
-        }
-        document.getElementById("reveresedArray").innerHTML = "The reversed Array is: " + result;
     }
 </script>
