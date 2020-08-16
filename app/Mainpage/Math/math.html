@@ -51,6 +51,13 @@
             <button onclick="addingThousandsSeprator()">Go!</button><br><br>
             <span id="finalResult"></span>
         </div>
+        <div class="box" id="factorial">
+            <h3>Factorial:</h3>
+            <span>Calculate Factorial:</span>
+            <input type="number" placeholder="Enter your number" id="toCalculateFactorial">
+            <button onclick="calculateFactorial()">Go!</button><br><br>
+            <span id="factorialResult"></span>
+        </div>
 
     </div>
 </body>
@@ -148,5 +155,14 @@
         }
         document.getElementById("finalResult").innerHTML = "The result is " + result;
 
+    }
+
+    function calculateFactorial() {
+        var n = document.getElementById("toCalculateFactorial").value;
+        var result = 1;
+        for (i = 1; n >= i; i++) {
+            result = result * i
+        }
+        document.getElementById("factorialResult").innerHTML = "The result is: " + result;
     }
 </script>
