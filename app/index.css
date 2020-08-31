@@ -1,16 +1,26 @@
-body{
-    background-color: burlywood;
-}
-h1{
-    color: #A52A2A;
-    text-align: center;
-    margin-top: 15%;
+body {
     font-family: cursive;
-    font-size: 35px;
 }
-button{
+
+#my-pic {
+    border-radius: 100%;
+    width: 18%;
+    height: 36%;
+}
+
+.my-pic-container {
+    text-align: center;
+}
+
+.welcome-text {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+button {
     color: #A52A2A;
-    background-color: #FFEFD5	;
+    background-color: #FFEFD5;
     border-radius: 5px;
     font-family: cursive;
     text-align: center;
@@ -18,10 +28,19 @@ button{
     text-align: center;
     padding: 1%;
 }
+
 button:hover {
     background-color: brown;
     color: burlywood;
 }
-div{
-    text-align: center;
+
+#about-me {
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.dropdown {
+    position: relative;
+    margin-top: 3%;
+    margin-left: 10%;
 }
