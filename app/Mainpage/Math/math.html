@@ -63,7 +63,7 @@
             <span>Get the first n Fibonacci numbers:</span>
             <input type="number" placeholder="n" id="toGetFibonacci">
             <button onclick="writeFibonacciSequesnce()">Go!</button><br><br>
-            <span id="fibonacciNumbers"></span>
+            <div id="fibonacciNumbers" class="fibo-result"></div>
         </div>
 
     </div>
@@ -191,8 +191,27 @@
                 x.push(x[i - 1] + x[i - 2]);
             }
         }
-        document.getElementById("fibonacciNumbers").innerHTML = x;
 
+        // document.getElementById("fibonacciNumbers").innerHTML = "<span>" + x + "</span>";
+        var result = "<ul>";
+        // <ul>
+        // <li></li>
+        // <li></li>
+        // <li></li>
+        // <li></li>
+        // </ul>
+        for (i = 0; i < x.length; i++) {
+            result += "<li>" + x[i] + "</li>";
+            // if (i !== x.length - 1) {
+            //     result += "<span class='fibo-span-result'> " + x[i] + " </span> -"
+            // } else {
+            //     result += "<span class='fibo-span-result'> " + x[i] + " </span>"
+            // }
+
+        }
+        result += "</ul>";
+        debugger;
+        document.getElementById("fibonacciNumbers").innerHTML = result;
         // var result = "";
 
         // x.forEach(element => {
