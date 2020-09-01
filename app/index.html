@@ -1,19 +1,35 @@
 <head>
     <title>Index Page</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 
 <body>
     <div>
-        <h1>Welcome To My Personal Website!</h1>
+        <div class="welcome-text">
+            <p>
+                Welcome! I'm Parissa. <br> A beginner in programming!
+            </p>
+        </div>
+        <div class="my-pic-container">
+            <img id="my-pic" src="Images/Index/my photo.jpg" alt="Parissa's photo">
+        </div>
     </div>
-    <div>
-        <button class="button" onclick="navigateToSamplePage()">See Samples</button>
+    <div id="about-me">
+        <button>Know more about me</button>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="">Action</a>
+            <a class="dropdown-item" href="">Another action</a>
+            <a class="dropdown-item" href="">Something else here</a>
+        </div>
     </div>
 </body>
 
 <script>
-    function navigateToSamplePage() {
-        window.location.href = "./Mainpage/mainPage.html"
-    }
 </script>
