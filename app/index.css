@@ -1,5 +1,7 @@
-body {
+.parent {
     font-family: cursive;
+    color: #547f64;
+    background-color: rgb(220, 220, 220);
 }
 
 #my-pic {
@@ -18,30 +20,16 @@ body {
     font-size: 1.5vw;
 }
 
-
-/* button {
-    color: #A52A2A;
-    background-color: #FFEFD5;
-    border-radius: 5px;
-    font-family: cursive;
-    text-align: center;
-    font-size: large;
-    text-align: center;
-    padding: 1%;
-}
-
-button:hover {
-    background-color: brown;
-    color: burlywood;
-} */
-
 #about-me {
     margin-top: 3%;
     margin-left: 5%;
 }
 
 .dropdown {
-    position: relative;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 68%;
+}
+
+.more-info {
+    margin-left: 26%;
 }
