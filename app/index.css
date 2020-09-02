@@ -1,7 +1,15 @@
+/* #30D5C8 (first color) 60%
+    #AEC6CF (second color)30%
+    #2BBD44 (third color) 10%
+ */
+
 .parent {
+    width: 100%;
+    height: 100vh;
+    margin-top: 0%;
     font-family: cursive;
-    color: #547f64;
-    background-color: rgb(220, 220, 220);
+    color: white;
+    background-color: #30D5C8;
 }
 
 #my-pic {
@@ -15,7 +23,7 @@
 }
 
 .welcome-text {
-    margin-top: 3%;
+    padding-top: 5%;
     text-align: center;
     font-size: 1.5vw;
 }
@@ -26,10 +34,13 @@
 }
 
 .dropdown {
-    margin-top: 3%;
-    margin-left: 68%;
+    margin-left: 25%;
 }
 
 .more-info {
-    margin-left: 26%;
+    margin-left: 35%;
+}
+
+.button-container {
+    display: flex;
 }
