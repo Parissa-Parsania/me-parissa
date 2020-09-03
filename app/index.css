@@ -34,18 +34,13 @@
     margin-left: 5%;
 }
 
-.dropdown {
-    margin-left: 40%;
-}
-
 .more-info {
     margin-left: 5%;
 }
 
 .button-container {
-    display: flex;
     margin-top: 3%;
-    width: 100%;
+    text-align: center;
 }
 
 .btn-custom {
@@ -53,7 +48,7 @@
     color: var(--main-color);
     background-color: var(--second-light-color);
     font-size: 1vw;
-    padding: 7%;
+    padding: .5rem;
 }
 
 .btn-custom:hover {
