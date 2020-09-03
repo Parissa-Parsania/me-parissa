@@ -1,12 +1,13 @@
 branches:
   only:
-    - master
-    language: node_js
-    node_js:
-      - 14
-    script:
-      - echo "I am Parissa"
-    install:
-      - npm install -g firebase-tools
-    after_success:
-      - firebase deploy --token $FIREBASE_TOKEN
+  - master
+  
+language: node_js
+node_js:
+  - 14
+script:
+  - echo "I am Parissa"
+install:
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
