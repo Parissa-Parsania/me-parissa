@@ -1,35 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="utf-8" />
     <title>Index Page</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div>
-        <div class="welcome-text">
-            <p>
-                Welcome! I'm Parissa. <br> A beginner in programming!
-            </p>
+    <div class="parent">
+        <div>
+            <div class="welcome-text">
+                <p>
+                    Welcome! I'm Parissa. <br> A beginner in programming!
+                </p>
+            </div>
+            <div class="my-pic-container">
+                <img id="my-pic" src="Images/Index/my-photo.jpg" alt="Parissa's photo">
+            </div>
         </div>
-        <div class="my-pic-container">
-            <img id="my-pic" src="Images/Index/my photo.jpg" alt="Parissa's photo">
-        </div>
-    </div>
-    <div id="about-me">
-        <button>Know more about me</button>
-    </div>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="">Action</a>
-            <a class="dropdown-item" href="">Another action</a>
-            <a class="dropdown-item" href="">Something else here</a>
+
+        <div class="button-container">
+            <div class="dropdown">
+                <button class="btn-custom btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Portfolio
+                    </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="">Discover Iran</a>
+                    <a class="dropdown-item" href="">Math</a>
+                </div>
+            </div>
+            <div class="more-info">
+                <a class="btn btn-secondary btn-lg">Know more about me!</a>
+            </div>
+
         </div>
     </div>
 </body>
 
 <script>
 </script>
+
+</html>
