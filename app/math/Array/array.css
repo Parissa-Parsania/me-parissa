@@ -1,10 +1,18 @@
+:root {
+    --main-color: #75BD75;
+    --light-color: #DFF7E3;
+    --gray: #999999;
+    --dark-gray: #5F6761;
+}
+
 .box {
-    border-bottom: dotted 2px brown;
+    border-bottom: dotted 2px var(--dark-gray);
     padding-bottom: 5%;
+    font-size: 1.3vw;
 }
 
 .right-div {
     font-family: cursive;
-    color: #A52A2A;
+    color: var(--dark-gray);
     margin-top: 5%;
 }
