@@ -32,15 +32,18 @@
                       Portfolio
                     </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="./Mainpage/mainPage.html">Math</a>
+                    <a class="dropdown-item" href="./math/main.html">Math</a>
                 </div>
-                <button class="btn-custom ">Know more about me!</button>
+                <button class="btn-custom" onclick="openKnowMorePage()">Know more about me!</button>
             </div>
         </div>
     </div>
 </body>
 
 <script>
+    function openKnowMorePage() {
+        window.location.href = "./know-more/know-more.html"
+    }
 </script>
 
 </html>
