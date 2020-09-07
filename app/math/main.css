@@ -1,3 +1,14 @@
+:root {
+    --main-color: #75BD75;
+    --light-color: #DFF7E3;
+    --gray: #999999;
+    --dark-gray: #5F6761;
+}
+
+body {
+    margin: 0%;
+}
+
 .main-div {
     display: flex;
     height: 100%;
@@ -5,27 +16,23 @@
 
 .left-div {
     width: 25%;
-    background-color: #DEB887;
-    color: #A52A2A;
-    font-size: x-large;
+    background-color: var(--gray);
+    color: var(--light-color);
+    font-size: 1.3vw;
     font-family: cursive;
     text-align: center;
+    border-right: var(--light-color) 3px solid;
 }
 
 .right-div {
     width: 74%;
-    background-color: #FFFACD;
+    background-color: var(--main-color);
     height: 100%;
 }
 
 .menu {
-    border-bottom: brown 1px solid;
+    border-bottom: var(--light-color) 3px solid;
 }
-
-
-/* .menu:hover {
-    cursor: pointer;
-} */
 
 .iframe {
     border: none;
