@@ -15,23 +15,27 @@ body {
 }
 
 .left-div {
-    width: 25%;
-    background-color: var(--gray);
+    width: 15%;
+    background-color: var(--dark-gray);
     color: var(--light-color);
     font-size: 1.3vw;
     font-family: cursive;
     text-align: center;
-    border-right: var(--light-color) 3px solid;
 }
 
 .right-div {
-    width: 74%;
-    background-color: var(--main-color);
+    width: 85%;
+    background-color: var(--light-color);
     height: 100%;
+    padding-left: 3%;
 }
 
 .menu {
-    border-bottom: var(--light-color) 3px solid;
+    border-bottom: var(--light-color) 1px solid;
+    border-bottom-style: groove;
+    height: 6%;
+    text-align: center;
+    padding-top: 5%;
 }
 
 .iframe {
