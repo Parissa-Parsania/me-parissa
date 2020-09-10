@@ -19,10 +19,12 @@
 </body>
 
 <script>
-    // WHEN MOUSE HOVER ON MENU/light color
-    var selectedColor = "#75BD75";
-    // before clicking or hovering the mouse
-    var originalColor = "#999999";
+    // after selecting the menu: light color
+    var selectedColor = "#DFF7E3";
+    // before clicking or hovering the mouse:dark gray
+    var originalColor = "#5F6761";
+    // when hovering the mouse:light gray
+    var hoverColor = "#999999";
 
     var globalSelectedElementId = "dashboard";
 
@@ -32,23 +34,29 @@
         document.getElementById("iframe ").src = src;
         globalSelectedElementId = selectedElementId;
         document.getElementById(selectedElementId).style.backgroundColor = selectedColor;
+        document.getElementById(selectedElementId).style.color = originalColor;
         menus.forEach(element => {
             // this body execute menus.length times and each time element variable is one of the menus
             if (element !== selectedElementId) {
                 document.getElementById(element).style.backgroundColor = originalColor;
+                document.getElementById(element).style.color = selectedColor;
             }
         });
     }
 
     function menuOnMouseOver(elementId) {
-        document.getElementById(elementId).style.backgroundColor = selectedColor;
+        document.getElementById(elementId).style.backgroundColor = hoverColor;
         document.getElementById(elementId).style.cursor = "pointer";
-
+        // if (element == selectedElementId) {
+        //     document.getElementById(elementId).style.backgroundColor = selectedColor;
+        //     document.getElementById(selectedElementId).style.color = originalColor;
+        // }
     }
 
     function menuOnMouseOut(elementId) {
         if (globalSelectedElementId !== elementId) {
             document.getElementById(elementId).style.backgroundColor = originalColor;
+            document.getElementById(selectedElementId).style.color = selectedColor;
         }
     }
 </script>
