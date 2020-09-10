@@ -7,6 +7,7 @@
 
 body {
     margin: 0%;
+    font-family: cursive;
 }
 
 .main-div {
@@ -19,7 +20,6 @@ body {
     background-color: var(--dark-gray);
     color: var(--light-color);
     font-size: 1.3vw;
-    font-family: cursive;
     text-align: center;
 }
 
@@ -41,4 +41,14 @@ body {
 .iframe {
     border: none;
     height: 100%;
+}
+
+.back-button {
+    position: fixed;
+    left: 2%;
+    bottom: 6%;
+    cursor: pointer;
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color);
+    font-size: 1.2vw;
 }

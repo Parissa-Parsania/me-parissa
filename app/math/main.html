@@ -9,11 +9,12 @@
             <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">Dashboard</div>
             <div class="menu" id="math" onmouseover="menuOnMouseOver('math')" onmouseout="menuOnMouseOut('math')" onclick="menuSelected('Math/math.html','math')">Math</div>
             <div class="menu" id="array" onmouseover="menuOnMouseOver('array')" onmouseout="menuOnMouseOut('array')" onclick=" menuSelected( 'Array/array.html', 'array') ">Array</div>
-            <!-- <div class=" menu " id="menu2" onmouseover="menuOnMouseOver('menu2') " onmouseout="menuOnMouseOut('menu2')" onclick="menuSelected('Menu2/menu2.html', 'menu2')">Menu 2</div>
-            <div class=" menu " id="menu3" onmouseover="menuOnMouseOver('menu3')" onmouseout="menuOnMouseOut('menu3')" onclick=" menuSelected( 'dashboard/dashBoard.html', 'menu3') ">Menu 3</div> -->
         </div>
         <div class="right-div ">
             <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
+        </div>
+        <div class="back-button" onclick="navigateToIndexPage()">
+            Back
         </div>
     </div>
 </body>
@@ -58,5 +59,9 @@
             document.getElementById(elementId).style.backgroundColor = originalColor;
             document.getElementById(selectedElementId).style.color = selectedColor;
         }
+    }
+
+    function navigateToIndexPage() {
+        window.location.href = "../index.html"
     }
 </script>
