@@ -38,12 +38,11 @@ h1 {
     margin-left: 9%;
     margin-top: 2%;
     padding: 0.5%;
-    background-color: var(--third-dark-color);
     color: var(--second-light-color);
+    font-size: 1vw;
 }
 
 .back-link-container:hover {
     color: var(--third-dark-color);
-    background-color: var(--second-light-color);
     cursor: pointer;
 }
