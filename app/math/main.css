@@ -20,7 +20,6 @@ body {
     background-color: var(--dark-gray);
     color: var(--light-color);
     font-size: 1.3vw;
-    text-align: center;
 }
 
 .right-div {
@@ -36,6 +35,14 @@ body {
     height: 6%;
     text-align: center;
     padding-top: 5%;
+}
+
+.fas {
+    padding-right: 4%;
+}
+
+.fa-arrow-circle-left {
+    padding-right: 0%;
 }
 
 .iframe {

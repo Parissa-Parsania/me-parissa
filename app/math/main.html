@@ -1,20 +1,27 @@
 <head>
     <title>Portfolio/Math & Array</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="https://kit.fontawesome.com/832571b038.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="main-div">
         <div class="left-div">
-            <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">Dashboard</div>
-            <div class="menu" id="math" onmouseover="menuOnMouseOver('math')" onmouseout="menuOnMouseOut('math')" onclick="menuSelected('Math/math.html','math')">Math</div>
-            <div class="menu" id="array" onmouseover="menuOnMouseOver('array')" onmouseout="menuOnMouseOut('array')" onclick=" menuSelected( 'Array/array.html', 'array') ">Array</div>
+            <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">
+                <i class="fas fa-home"></i>Home
+            </div>
+            <div class="menu" id="math" onmouseover="menuOnMouseOver('math')" onmouseout="menuOnMouseOut('math')" onclick="menuSelected('Math/math.html','math')">
+                <i class="fas fa-calculator"></i>Math
+            </div>
+            <div class="menu" id="array" onmouseover="menuOnMouseOver('array')" onmouseout="menuOnMouseOut('array')" onclick=" menuSelected( 'Array/array.html', 'array') ">
+                <i class="fas fa-sort-amount-down-alt"></i>Array
+            </div>
         </div>
         <div class="right-div ">
             <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
         </div>
         <div class="back-button" onclick="navigateToIndexPage()">
-            Back
+            <i class="fas fa-arrow-circle-left"></i> Back
         </div>
     </div>
 </body>
@@ -57,7 +64,7 @@
     function menuOnMouseOut(elementId) {
         if (globalSelectedElementId !== elementId) {
             document.getElementById(elementId).style.backgroundColor = originalColor;
-            document.getElementById(selectedElementId).style.color = selectedColor;
+            document.getElementById(ElementId).style.color = selectedColor;
         }
     }
 
