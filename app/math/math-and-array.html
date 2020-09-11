@@ -21,7 +21,6 @@
             <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
         </div>
         <div class="back-button" id="backButton" onclick="navigateToIndexPage()">
-            <i class="fas fa-arrow-circle-left"></i> Back
         </div>
 
     </div>
@@ -39,6 +38,51 @@
         document.getElementById("arrowIcon").innerHTML = "<i class='fas fa-arrow-left'></i>"
         document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i> Back"
         document.getElementById("arrowIcon").style.textAlign = "right"
+    }
+
+
+    // after selecting the menu: light color
+    var selectedColor = "#DFF7E3";
+    // before clicking or hovering the mouse:dark gray
+    var originalColor = "#5F6761";
+    // when hovering the mouse:light gray
+    var hoverColor = "#999999";
+
+    var globalSelectedElementId = "dashboard";
+
+    function menuSelected(src, selectedElementId) {
+        var menus = ["math", "dashboard", "array"];
+        document.getElementById("iframe ").src = src;
+        globalSelectedElementId = selectedElementId;
+        document.getElementById(selectedElementId).style.backgroundColor = selectedColor;
+        document.getElementById(selectedElementId).style.color = originalColor;
+        menus.forEach(element => {
+            // this body execute menus.length times and each time element variable is one of the menus
+            if (element !== selectedElementId) {
+                document.getElementById(element).style.backgroundColor = originalColor;
+                document.getElementById(element).style.color = selectedColor;
+            }
+        });
+    }
+
+    function menuOnMouseOver(elementId) {
+        document.getElementById(elementId).style.backgroundColor = hoverColor;
+        document.getElementById(elementId).style.cursor = "pointer";
+        // if (element == selectedElementId) {
+        //     document.getElementById(elementId).style.backgroundColor = selectedColor;
+        //     document.getElementById(selectedElementId).style.color = originalColor;
+        // }
+    }
+
+    function menuOnMouseOut(elementId) {
+        if (globalSelectedElementId !== elementId) {
+            document.getElementById(elementId).style.backgroundColor = originalColor;
+            document.getElementById(ElementId).style.color = selectedColor;
+        }
+    }
+
+    function navigateToIndexPage() {
+        window.location.href = "../index.html"
     }
 
     function sidebarCollaps() {
@@ -60,48 +104,5 @@
         }
 
 
-        // after selecting the menu: light color
-        var selectedColor = "#DFF7E3";
-        // before clicking or hovering the mouse:dark gray
-        var originalColor = "#5F6761";
-        // when hovering the mouse:light gray
-        var hoverColor = "#999999";
-
-        var globalSelectedElementId = "dashboard";
-
-        function menuSelected(src, selectedElementId) {
-            var menus = ["math", "dashboard", "array"];
-            document.getElementById("iframe ").src = src;
-            globalSelectedElementId = selectedElementId;
-            document.getElementById(selectedElementId).style.backgroundColor = selectedColor;
-            document.getElementById(selectedElementId).style.color = originalColor;
-            menus.forEach(element => {
-                // this body execute menus.length times and each time element variable is one of the menus
-                if (element !== selectedElementId) {
-                    document.getElementById(element).style.backgroundColor = originalColor;
-                    document.getElementById(element).style.color = selectedColor;
-                }
-            });
-        }
-
-        function menuOnMouseOver(elementId) {
-            document.getElementById(elementId).style.backgroundColor = hoverColor;
-            document.getElementById(elementId).style.cursor = "pointer";
-            // if (element == selectedElementId) {
-            //     document.getElementById(elementId).style.backgroundColor = selectedColor;
-            //     document.getElementById(selectedElementId).style.color = originalColor;
-            // }
-        }
-
-        function menuOnMouseOut(elementId) {
-            if (globalSelectedElementId !== elementId) {
-                document.getElementById(elementId).style.backgroundColor = originalColor;
-                document.getElementById(ElementId).style.color = selectedColor;
-            }
-        }
-
-        function navigateToIndexPage() {
-            window.location.href = "../index.html"
-        }
     }
 </script>
