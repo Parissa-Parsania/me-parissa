@@ -1,0 +1,107 @@
+<head>
+    <title>Math-and-Array</title>
+    <link rel="stylesheet" href="math-and-array.css" />
+    <script src="https://kit.fontawesome.com/832571b038.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="left-div" id="leftDiv">
+            <div class="sidebar-collaps-container" id="arrowIcon" onclick="sidebarCollaps()">
+            </div>
+            <div class="menu" id="dashboard" onmouseover="menuOnMouseOver('dashboard')" onmouseout="menuOnMouseOut('dashboard')" onclick="menuSelected('dashboard/dashBoard.html', 'dashboard')">
+
+            </div>
+            <div class="menu" id="math" onmouseover="menuOnMouseOver('math')" onmouseout="menuOnMouseOut('math')" onclick="menuSelected('Math/math.html','math')">
+            </div>
+            <div class="menu" id="array" onmouseover="menuOnMouseOver('array')" onmouseout="menuOnMouseOut('array')" onclick=" menuSelected( 'Array/array.html', 'array') ">
+            </div>
+        </div>
+        <div class="right-div ">
+            <iframe src="dashboard/dashBoard.html " id="iframe " class="iframe " width="100% "></iframe>
+        </div>
+        <div class="back-button" id="backButton" onclick="navigateToIndexPage()">
+            <i class="fas fa-arrow-circle-left"></i> Back
+        </div>
+
+    </div>
+</body>
+
+<script>
+    initializeLeftMenu();
+    var isMenuCollapsed = false;
+
+    function initializeLeftMenu() {
+        document.getElementById("leftDiv").style.width = "15%";
+        document.getElementById("dashboard").innerHTML = "<i class='fas fa-home'></i>Home";
+        document.getElementById("math").innerHTML = "<i class='fas fa-calculator'></i>Math"
+        document.getElementById("array").innerHTML = "<i class='fas fa-sort-amount-down-alt'></i>Array"
+        document.getElementById("arrowIcon").innerHTML = "<i class='fas fa-arrow-left'></i>"
+        document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i> Back"
+        document.getElementById("arrowIcon").style.textAlign = "right"
+    }
+
+    function sidebarCollaps() {
+        // it is false by default and now we have defined an if loop for when it's not false, means the menu is collpased
+        isMenuCollapsed = !isMenuCollapsed;
+        // true
+        if (isMenuCollapsed) {
+            document.getElementById("leftDiv").style.width = "4%";
+            document.getElementById("dashboard").innerHTML = "<i class='fas fa-home'></i>";
+            document.getElementById("math").innerHTML = "<i class='fas fa-calculator'></i>"
+            document.getElementById("array").innerHTML = "<i class='fas fa-sort-amount-down-alt'></i>"
+            document.getElementById("arrowIcon").innerHTML = "<i class='fas fa-arrow-right'></i>"
+            document.getElementById("arrowIcon").style.textAlign = "center"
+            document.getElementById("arrowIcon").style.padding = "15px"
+            document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i>"
+            document.getElementById("backButton").style.border = "none"
+        } else {
+            initializeLeftMenu();
+        }
+
+
+        // after selecting the menu: light color
+        var selectedColor = "#DFF7E3";
+        // before clicking or hovering the mouse:dark gray
+        var originalColor = "#5F6761";
+        // when hovering the mouse:light gray
+        var hoverColor = "#999999";
+
+        var globalSelectedElementId = "dashboard";
+
+        function menuSelected(src, selectedElementId) {
+            var menus = ["math", "dashboard", "array"];
+            document.getElementById("iframe ").src = src;
+            globalSelectedElementId = selectedElementId;
+            document.getElementById(selectedElementId).style.backgroundColor = selectedColor;
+            document.getElementById(selectedElementId).style.color = originalColor;
+            menus.forEach(element => {
+                // this body execute menus.length times and each time element variable is one of the menus
+                if (element !== selectedElementId) {
+                    document.getElementById(element).style.backgroundColor = originalColor;
+                    document.getElementById(element).style.color = selectedColor;
+                }
+            });
+        }
+
+        function menuOnMouseOver(elementId) {
+            document.getElementById(elementId).style.backgroundColor = hoverColor;
+            document.getElementById(elementId).style.cursor = "pointer";
+            // if (element == selectedElementId) {
+            //     document.getElementById(elementId).style.backgroundColor = selectedColor;
+            //     document.getElementById(selectedElementId).style.color = originalColor;
+            // }
+        }
+
+        function menuOnMouseOut(elementId) {
+            if (globalSelectedElementId !== elementId) {
+                document.getElementById(elementId).style.backgroundColor = originalColor;
+                document.getElementById(ElementId).style.color = selectedColor;
+            }
+        }
+
+        function navigateToIndexPage() {
+            window.location.href = "../index.html"
+        }
+    }
+</script>

@@ -16,10 +16,10 @@ body {
 }
 
 .left-div {
-    width: 15%;
     background-color: var(--dark-gray);
     color: var(--light-color);
     font-size: 1.2vw;
+    transition: 1s;
 }
 
 .right-div {
@@ -58,4 +58,13 @@ body {
     border-bottom: 1px solid var(--main-color);
     color: var(--main-color);
     font-size: 1.2vw;
+}
+
+.sidebar-collaps-container {
+    padding: 5%;
+}
+
+.sidebar-collaps-container:hover {
+    cursor: pointer;
+    color: var(--main-color);
 }
