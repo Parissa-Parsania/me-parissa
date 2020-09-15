@@ -30,8 +30,10 @@
     initializeLeftMenu();
     var isMenuCollapsed = false;
 
-    function initializeLeftMenu() {
-        document.getElementById("leftDiv").style.width = "15%";
+    function initializeLeftMenu(isArrowTouched = false) {
+        if (isArrowTouched === false) {
+            document.getElementById("leftDiv").style.width = "15%";
+        }
         document.getElementById("dashboard").innerHTML = "<i class='fas fa-home'></i>Home";
         document.getElementById("math").innerHTML = "<i class='fas fa-calculator'></i>Math"
         document.getElementById("array").innerHTML = "<i class='fas fa-sort-amount-down-alt'></i>Array"
@@ -39,8 +41,6 @@
         document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i> Back"
         document.getElementById("arrowIcon").style.textAlign = "right"
     }
-
-
     // after selecting the menu: light color
     var selectedColor = "#DFF7E3";
     // before clicking or hovering the mouse:dark gray
@@ -77,7 +77,7 @@
     function menuOnMouseOut(elementId) {
         if (globalSelectedElementId !== elementId) {
             document.getElementById(elementId).style.backgroundColor = originalColor;
-            document.getElementById(ElementId).style.color = selectedColor;
+            document.getElementById(elementId).style.color = selectedColor;
         }
     }
 
@@ -86,11 +86,10 @@
     }
 
     function sidebarCollaps() {
-        // it is false by default and now we have defined an if loop for when it's not false, means the menu is collpased
         isMenuCollapsed = !isMenuCollapsed;
-        // true
+
         if (isMenuCollapsed) {
-            document.getElementById("leftDiv").style.width = "4%";
+            collapseMenu(5);
             document.getElementById("dashboard").innerHTML = "<i class='fas fa-home'></i>";
             document.getElementById("math").innerHTML = "<i class='fas fa-calculator'></i>"
             document.getElementById("array").innerHTML = "<i class='fas fa-sort-amount-down-alt'></i>"
@@ -100,9 +99,28 @@
             document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i>"
             document.getElementById("backButton").style.border = "none"
         } else {
-            initializeLeftMenu();
+            collapseMenu(15);
+            initializeLeftMenu(true);
         }
+    }
 
+    function collapseMenu(targetWidth) {
+        // Because width is in %, and we need to convert the string into number only
+        var currentWidth = parseInt(document.getElementById("leftDiv").style.width)
+        if (!currentWidth) {
+            currentWidth = 0;
+        }
+        var closeMenuInterval = setInterval(() => {
+            if (currentWidth == targetWidth) {
+                clearInterval(closeMenuInterval)
+            }
+            if (currentWidth < targetWidth) {
+                currentWidth++;
+            } else {
+                currentWidth--
+            }
+            document.getElementById("leftDiv").style.width = currentWidth + "%"
+        }, 20)
 
     }
 </script>

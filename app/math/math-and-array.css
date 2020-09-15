@@ -19,11 +19,11 @@ body {
     background-color: var(--dark-gray);
     color: var(--light-color);
     font-size: 1.2vw;
-    transition: 1s;
+    /* transition: 1s; this can be used instead of Interval function */
 }
 
 .right-div {
-    width: 85%;
+    width: -webkit-fill-available;
     background-color: var(--light-color);
     height: 100%;
     padding-left: 3%;
@@ -32,7 +32,7 @@ body {
 .menu {
     border-bottom: var(--light-color) 1px solid;
     border-bottom-style: groove;
-    height: 6%;
+    height: 4%;
     text-align: center;
     padding-top: 5%;
 }
