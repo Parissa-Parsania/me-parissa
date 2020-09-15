@@ -27,6 +27,16 @@
 </body>
 
 <script>
+    // after selecting the menu: light color
+    var selectedColor = "#DFF7E3";
+    // before clicking or hovering the mouse:dark gray
+    var originalColor = "#5F6761";
+    // when hovering the mouse:light gray
+    var hoverColor = "#999999";
+
+    var globalSelectedElementId = "dashboard";
+    menuSelected("dashboard/dashBoard.html", "dashboard");
+
     initializeLeftMenu();
     var isMenuCollapsed = false;
 
@@ -41,16 +51,10 @@
         document.getElementById("backButton").innerHTML = "<i class='fas fa-arrow-circle-left'></i> Back"
         document.getElementById("arrowIcon").style.textAlign = "right"
     }
-    // after selecting the menu: light color
-    var selectedColor = "#DFF7E3";
-    // before clicking or hovering the mouse:dark gray
-    var originalColor = "#5F6761";
-    // when hovering the mouse:light gray
-    var hoverColor = "#999999";
 
-    var globalSelectedElementId = "dashboard";
 
     function menuSelected(src, selectedElementId) {
+
         var menus = ["math", "dashboard", "array"];
         document.getElementById("iframe ").src = src;
         globalSelectedElementId = selectedElementId;
@@ -66,12 +70,10 @@
     }
 
     function menuOnMouseOver(elementId) {
-        document.getElementById(elementId).style.backgroundColor = hoverColor;
-        document.getElementById(elementId).style.cursor = "pointer";
-        // if (element == selectedElementId) {
-        //     document.getElementById(elementId).style.backgroundColor = selectedColor;
-        //     document.getElementById(selectedElementId).style.color = originalColor;
-        // }
+        if (globalSelectedElementId !== elementId) {
+            document.getElementById(elementId).style.backgroundColor = hoverColor;
+            document.getElementById(elementId).style.cursor = "pointer";
+        }
     }
 
     function menuOnMouseOut(elementId) {
