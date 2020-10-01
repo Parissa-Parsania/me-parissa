@@ -1,48 +1,49 @@
 :root {
-    --main-color: #1a887f;
-    --second-light-color: #bbeff1;
-    --third-dark-color: #033f39;
+  --main-color: #1a887f;
+  --second-light-color: #bbeff1;
+  --third-dark-color: #033f39;
 }
 
 body {
-    margin: 0%;
+  margin: 0%;
 }
 
 .parent {
-    width: 100%;
-    height: 100vh;
-    margin: 0%;
-    padding: 0%;
-    font-family: cursive;
-    background-color: var(--main-color);
-    color: var( --second-light-color);
+  width: 100%;
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  font-family: cursive;
+  background-color: var(--main-color);
+  color: var(--second-light-color);
 }
 
 h1 {
-    padding-top: 5%;
-    text-align: center;
-    font-size: 1.5vw;
+  padding-top: 5%;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 .text-container {
-    width: 85%;
-    margin: auto;
-    padding: 2%;
-    font-size: 1vw;
-    background-color: var(--second-light-color);
-    color: var(--main-color);
+  width: 85%;
+  margin: auto;
+  padding: 2%;
+  font-size: 1vw;
+  background-color: var(--second-light-color);
+  color: var(--main-color);
 }
 
 .back-link-container {
-    width: fit-content;
-    margin-left: 9%;
-    margin-top: 2%;
-    padding: 0.5%;
-    color: var(--second-light-color);
-    font-size: 1vw;
+  width: fit-content;
+  font-weight: bolder;
+  margin-left: 9%;
+  margin-top: 2%;
+  padding: 0.5%;
+  color: #298;
+  font-size: 1vw;
 }
 
 .back-link-container:hover {
-    color: var(--third-dark-color);
-    cursor: pointer;
+  color: var(--third-dark-color);
+  cursor: pointer;
 }
