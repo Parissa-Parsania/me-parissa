@@ -33,10 +33,14 @@ h1 {
     color: var(--main-color);
 }
 
+.contact-info-container {
+    font-size: 0.8vw;
+}
+
 .back-link-container {
     width: fit-content;
     margin-left: 9%;
-    margin-top: 2%;
+    margin-top: 1%;
     padding: 0.5%;
     color: var(--second-light-color);
     font-size: 1vw;
