@@ -1,0 +1,569 @@
+/* adding some common properties for the whole body part and also adding the background image */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Apple Chancery, cursive;
+    background-image: url(http://www.baltana.com/files/wallpapers-5/Vintage-Background-High-Definition-Wallpaper-16553.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+}
+
+
+/* I would like to have a small margin from both sides so the background image can be apperead in the whole website */
+
+.parent {
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+/* defining font sizes in vw or %, also margins and paddings in % will help not to loose the style in different screens  */
+
+.website-title {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    font-size: 4vw;
+    background-color: rgba(53, 53, 53, 0.65);
+    color: white;
+    padding: 30px;
+}
+
+.header-pic {
+    width: 100%;
+    height: 100vh;
+}
+
+.navigation-bar-item {
+    /* to remove underlines form the links */
+    text-decoration: none;
+    color: white;
+}
+
+.navigation-bar-item:hover {
+    /* to have a smoother change when user hover over the navigation items I added a transition time of 0.2s */
+    transition: 0.2s;
+    color: black;
+    padding-bottom: 1px;
+    background-color: white;
+    padding: 0 20px;
+    /* to make the backgorund color rounded */
+    border-radius: 51px;
+}
+
+.navigation-bar {
+    width: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: rgba(53, 53, 53, 0.65);
+    /* I want the navigation bar to place on the first page pic so I give it - margin top */
+    margin-top: -10vh;
+    /* I would like to have the menu available for user in every stage of the website so I will choose sticky position*/
+    position: sticky;
+    /* this is the height I want to give the bar from the top of the page when goes down from the first page */
+    top: 1vh;
+    /* to have the bar on top of other elements */
+    z-index: 2;
+}
+
+
+/* to remove list styel and bullet */
+
+.navigation-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.topics {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(139, 0, 0);
+}
+
+.introducting-iran-text {
+    margin-top: 3%;
+}
+
+table {
+    /* The border-collapse property sets the table's borders into a single border  */
+    border-collapse: collapse;
+    width: 30%;
+    margin: auto;
+    /* margin auto will help to have the table exactly in the center of the page */
+    font-size: 100%;
+}
+
+tr {
+    border: 1px rgb(205, 133, 63) dotted;
+    text-align: left;
+}
+
+
+/* To give a different background-color to odd raws for more readable table */
+
+tr:nth-child(odd) {
+    background-color: rgb(222, 184, 135);
+}
+
+
+/*  change the backgound-color when user hover the mouse on the table rows  */
+
+tr:hover {
+    background-color: rgb(205, 133, 63);
+}
+
+
+/* I want to have the video iframe on right side of the page so I will give it a flaor=right */
+
+.video {
+    float: right;
+    margin-left: 5%;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.video-introduction-iframe {
+    width: 100%;
+    height: 55vh;
+}
+
+.section {
+    margin-bottom: 2%;
+    min-height: 100vh;
+    border: 1px solid rgba(175, 174, 174, 0);
+}
+
+
+/* I want to design this part as 4 pictures with text on mouse hover */
+
+.attractions-pic {
+    width: 100%;
+    height: 40vh;
+    display: block;
+    /* picture will be visible with opacity=1 till the time of mouse hover */
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    height: 100%;
+    width: 90%;
+    /* to make the text invisible till the time user hover the mouse on the pic, I will set the opacity on 0 */
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.attractions-text {
+    color: black;
+    position: absolute;
+    display: block;
+    width: 100%;
+    font-size: 1vw;
+}
+
+.attraction-image-container {
+    position: relative;
+    width: 50%;
+}
+
+
+/* the text container will be visible when mouse hover */
+
+.attraction-image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+/* the picture opacity will decrease when mouse hover to make the text readable */
+
+.attraction-image-container:hover .attractions-pic {
+    opacity: 0.25;
+}
+
+.attraction-row-container {
+    display: flex;
+}
+
+.inner-section {
+    min-height: 90vh;
+    margin-top: 6vh;
+}
+
+.festival-pic {
+    width: 100%;
+    height: 35vh;
+}
+
+.festival-text {
+    font-size: 1vw;
+}
+
+.festival-item-container {
+    min-height: 30vh;
+}
+
+.festival-text-container {
+    padding: 1px 10px;
+}
+
+.cuisine-pic-container {
+    width: 100%;
+    text-align: center;
+}
+
+.cuisine-name {
+    text-align: center;
+    color: rgb(139, 0, 0);
+    font-size: 1vw;
+}
+
+.cuisine-text {
+    font-size: 1vw;
+    color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.cuisine-recipe-button {
+    text-align: center;
+    border: none;
+    padding-bottom: 1px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 4px solid rgb(139, 0, 0, 0.5);
+    color: rgb(139, 0, 0, 0.6);
+}
+
+
+/* change the element style on hover */
+
+.cuisine-recipe-button:hover {
+    color: rgb(139, 0, 0, 1);
+    border-color: rgb(139, 0, 0, 1);
+    cursor: pointer;
+}
+
+.festival-text {
+    margin-top: 5%;
+}
+
+.festival-image-container-left {
+    float: left;
+    width: 25%;
+}
+
+.festival-image-container-right {
+    float: right;
+    width: 25%;
+}
+
+.festival-text-container-right {
+    width: 74%;
+    margin-left: 25%;
+    padding-top: 0;
+}
+
+.festival-text-container-left {
+    width: 75%;
+    padding-top: 0;
+}
+
+.cuisine-column {
+    width: 90%;
+    padding: 5px;
+    box-shadow: 10px 10px 10px rgb(222, 184, 135);
+}
+
+
+/* I want to have 3 sections in a raw so I will use display=grid */
+
+.cuisine-column-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem 1rem;
+}
+
+.cuisine-pic {
+    max-width: 70%;
+    height: 40vh;
+    /* to make the pictures round I will add 100% border radius */
+    border-radius: 100%;
+    margin-top: 5px;
+}
+
+.handicrafts-holder {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem 1rem;
+}
+
+.handicrafts-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.handicrafts-text {
+    /* to fix the text on the pic I will use absolute position */
+    position: absolute;
+    bottom: 1%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 1.2vw;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.handicrafts-container-pic {
+    width: 100%;
+    height: 50vh;
+}
+
+
+/* I want to change the style of scrollbar */
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgb(205, 133, 63);
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(139, 0, 0);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 107, 47);
+}
+
+.footer-container {
+    width: 100%;
+    min-height: 10%;
+    color: white;
+    background-color: rgb(139, 0, 0, 0.5);
+    position: relative;
+}
+
+.contact-info {
+    font-size: 1vw;
+    position: relative;
+    width: fit-content;
+    padding-top: 1vh;
+    padding-left: 1%;
+}
+
+.copy-right-container {
+    font-size: 0.7vw;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    font-size: 0.6vw;
+    font-style: italic;
+}
+
+.back-to-top-link {
+    padding: 10px;
+    border-radius: 100%;
+    color: rgb(222, 184, 135);
+}
+
+.back-to-top-link:hover {
+    cursor: pointer;
+    color: rgb(139, 0, 0);
+}
+
+.back-to-top-container {
+    max-width: fit-content;
+    margin-right: 3%;
+    float: right;
+}
+
+@media(max-height:500px) {
+    .back-to-top-link {
+        padding: 0;
+        border: none;
+    }
+    .back-to-top-container {
+        top: 0;
+        position: relative;
+        width: fit-content;
+        float: right;
+    }
+    .contact-info {
+        position: relative;
+        left: 0;
+        padding: 0
+    }
+}
+
+
+/* to make the page responsive in smaller devices: */
+
+@media (max-width: 900px) {
+    .website-title {
+        left: 28%;
+    }
+    /* I want to zoom in the picture to a certain point for this screen size */
+    .header-pic {
+        width: 228%;
+        margin-left: -61%;
+        height: 100vh;
+    }
+    /* I decided to change the navigation bar format to fixed on top */
+    .navigation-bar {
+        position: fixed;
+        margin-top: 0;
+        font-size: 2.8vw;
+    }
+    /* giving style to the items but npt to the first item */
+    .navigation-bar-item:not(#menu_item_1) {
+        border-left: 1px solid lightgray;
+        padding: 0px 3px;
+    }
+    .navigation-bar-item:hover {
+        padding: 0 3px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    ul li {
+        display: inline;
+    }
+    /* removing the margins to have 100% width  */
+    .parent {
+        width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .topics {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 5.5vw;
+        color: rgb(139, 0, 0);
+    }
+    /* full width video */
+    .video {
+        width: 100%;
+    }
+    .video-introduction-iframe {
+        width: 100%;
+        height: 40vh;
+    }
+    .introducting-iran-text {
+        width: 80%;
+        font-size: 100%;
+        margin-left: 10%;
+    }
+    table {
+        width: 80%;
+    }
+    .section {
+        margin-bottom: 2%;
+        min-height: 100vh;
+    }
+    /* I want to have a full width view of pictures here: */
+    .attraction-row-container {
+        display: block;
+    }
+    .attraction-image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .overlay {
+        top: 1%
+    }
+    .festival-image-container-left,
+    .festival-image-container-right {
+        width: 100%;
+    }
+    .festival-text-container-right,
+    .festival-text-container-left {
+        width: 92%;
+        margin: 0 5px;
+    }
+    .festival-text,
+    .attractions-text {
+        font-size: 92%;
+    }
+    .cuisine-column {
+        position: relative;
+        float: left;
+        margin-left: 2%;
+        min-height: 72vh;
+    }
+    .cuisine-pic {
+        max-width: 60%;
+        height: 16vh;
+        border-radius: 100%;
+        margin-top: 5px;
+    }
+    .cuisine-name {
+        font-size: 110%;
+    }
+    .cuisine-text {
+        font-size: 90%;
+    }
+    /* I used display: contents here to ignore the CSS grid style for smaller screens */
+    .cuisine-column-container {
+        display: contents;
+    }
+    .handicrafts-text {
+        font-size: 110%;
+    }
+    .handicrafts-holder {
+        display: contents;
+    }
+    .back-to-top-container {
+        top: 45%;
+    }
+    .back-to-top-container,
+    .copy-right-container,
+    .contact-info {
+        max-width: unset;
+        position: unset;
+    }
+    .footer-container {
+        text-align: center;
+    }
+    /* I changed the style of back to top link here */
+    .back-to-top-link {
+        text-decoration: underline;
+        border: none;
+        padding: 0;
+        background-color: inherit;
+        font-size: 600%;
+    }
+    .back-to-top-link:hover {
+        background-color: unset;
+        color: unset;
+        cursor: pointer;
+    }
+    .contact-info {
+        font-size: 100%;
+    }
+    .copy-right-container {
+        font-size: 70%;
+        font-style: italic;
+    }
+}
